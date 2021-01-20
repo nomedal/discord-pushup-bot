@@ -5,11 +5,11 @@ import asyncio
 from datetime import datetime
 import os
 
-send_time='08:00'
+send_time='05:00'
 token = os.getenv("DISCORD_BOT_TOKEN")
 message_channel_id = 792133366295822337
 
-class MyClient(discord.Client):
+class PushupBot(discord.Client):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
