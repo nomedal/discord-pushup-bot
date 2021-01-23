@@ -5,11 +5,7 @@ import asyncio
 from datetime import datetime
 import os
 
-send_time='08:00'
-token = os.getenv("DISCORD_BOT_TOKEN")
-message_channel_id = 792133366295822337
-
-class MyClient(discord.Client):
+class PushupBot(discord.Client):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
@@ -32,5 +28,10 @@ class MyClient(discord.Client):
                 await channel.send("Today we will do %d pushups." % value)
                 await asyncio.sleep(60) # task runs every 60 seconds
 
-client = MyClient()
-client.run(token)
+if __name__ == "__main__":
+    send_time='05:00'
+    token = os.getenv("DISCORD_BOT_TOKEN")
+    message_channel_id = 792133366295822337
+
+    client = PushupBot()
+    client.run(token)
