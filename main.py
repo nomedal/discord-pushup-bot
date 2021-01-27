@@ -23,7 +23,7 @@ class PushupBot(discord.Client):
         channel = self.get_channel(message_channel_id) # channel ID goes here
         while not self.is_closed():
             now=datetime.strftime(datetime.now(),'%H:%M')
-            value = random.randint(100, 150)
+            value = random.randint(120, 170)
             if now == send_time:
                 await channel.send("Today we will do %d pushups." % value)
                 await asyncio.sleep(60) # task runs every 60 seconds
