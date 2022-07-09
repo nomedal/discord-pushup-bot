@@ -3,21 +3,21 @@ A simple bot with a simple purpose. To post how many pushups one should do every
 
 It randomizes between 120 and 170 pushups, but can be set to an arbitrary range, or fixed number.
 
-It is fully self hosted using python 3.8.10.
+It is fully self-hosted using python 3.10
 
 # Dependencies
 ```
-discord, random, asyncio, datetime, os
+discord, random, asyncio, datetime
 ```
 # Usage
 The variables below needs to be added either as an environment variable, server variable(for server use) or as clear text.
 `"DISCORD_BOT_TOKEN"` is your personal bot token.
-`CHANNEL_ID` is your channel ID.
+`CHANNEL_ID` is your numerical channel ID.
 `CUSTOM ACTIVITY STATUS` is an optional custom activity status for your bot. Can be commented out or removed if not wanted.
 
-It's highly recommended using `screen` when running the bot.
+It's highly recommended using `screen` when running the bot undockerized.
 
 To run from terminal:
 ```
-python main.py
+python3 pushupbot.py
 ```
